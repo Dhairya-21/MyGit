@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highest / Lowest</title>
+  </head>
+  <body>
+    <script>
+        var st = prompt("Enter a list of numbers separated by a space")
+      function highlow(st) {
+        st = st + " ";
+        var num = "";
+        var arr = [];
+        for (var i = 0; i <= st.length; i++) {
+          if (st.charAt(i) == " ") {
+            arr.push(parseInt(num));
+            num = "";
+          } else {
+            num = num + st.charAt(i);
+          }
+        }
+        arr.sort();
+        document.write(+arr[0] +" "+ arr[arr.length-1]);
+      }
+      highlow(st);
+    </script>
+  </body>
+</html>

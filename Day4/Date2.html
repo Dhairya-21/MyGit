@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Days Calculator</title>
+  </head>
+  <body>
+    <script>
+      var date = prompt("Enter date in DD-MM-YYYY");
+      var datearr = date.split("-");
+      var datetoday = new Date();
+      if (datearr[0] <= 31 && datearr[1] <= 12 && datearr[2] >= 2023) {
+        var days = datearr[0] - datetoday.getDate();
+        var months = datearr[1] - datetoday.getMonth() - 1;
+        var years = datearr[2] - datetoday.getFullYear();
+        var days= (days + months*30 + years *365);
+        var hours = days * 24;
+        document.write("Hours Left: ",hours);
+      }
+      else{
+        alert('Invalid input');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+* {
+  padding-top: 0px;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+#logo {
+  position: absolute;
+  left: 90%;
+  top: 4%;
+}
+#content {
+  height: 600px;
+  border: solid blue;
+  background-image: url("background2.jpeg");
+}
+#heading {
+  padding-left: 12%;
+}
+h3 {
+    text-align: center;
+    padding: 12px;
+    border: solid red;
+    border-radius: 12px;
+    width: 500px;
+    background-color: red;
+    color: yellowgreen;
+}
+#flex {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+#picture {
+    background-color: white;
+    padding: 4%;
+    margin-top: 40px;
+    border: solid blue;
+}
+p {
+     /* background-color: white; */
+     width: max-content;
+     font-weight: bold;
+     font-size: 20px;
+     height: min-content;
+} 
+#video {
+  border: solid blue;
+  /* padding-right: -3%; */
+  width: 1000px;
+  height: 500px;
+}
+span {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0px;
+  align-items: center;
+}
+#flex2{
+    display: flex;
+}
+#name{
+    border: solid salmon;
+    background-color: brown;
+    width: min-content;
+}
+#marq {
+  border: solid rgb(110, 110, 0);
+  border-left-color: yellow;
+  border-right-color: yellow;
+  background-color: yellow;
+  /* position: relative; */
+}

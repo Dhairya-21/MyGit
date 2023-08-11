@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <h1>Register</h1>
+    <div id="center">
+      <form action="RegisterConfirm.html" id="Form2">
+        <div>
+          <label for="">Name</label> <br />
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="name"
+            required
+          /><br />
+        </div>
+        <div>
+          <label for="">Email address</label> <br />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="email"
+            required
+          /><br />
+        </div>
+        <div>
+          <label for="">Password</label> <br />
+          <input
+            type="password"
+            id="password"
+            minlength="6"
+            maxlength="35"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <div>
+          <label for="">Confirm Password</label> <br />
+          <input
+            type="password"
+            id="cpassword"
+            minlength="6"
+            maxlength="35"
+            placeholder="Enter your password again"
+            required
+          />
+          <div style="display: none; color: red; font-size: 80%;" id="alert1">Password don't match </div>
+        </div>
+        <div>
+          <label for="">Gender:</label>
+          <input type="radio" name="Gender" class="Gender" value="Male" />Male
+          <input
+            type="radio"
+            name="Gender"
+            class="Female"
+            value="Female"
+          />Female
+        </div>
+        <div>
+          <label for="">Hobbies</label> <br />
+          <input type="checkbox" name="" id="Sports" />Sports
+          <input type="checkbox" name="" id="Music" />Music
+          <input type="checkbox" name="" id="Movies" />Movies
+        </div>
+        <button type="submit" onclick="alertcall()" id="submit">Register</button>
+        <a href="Login.html">Have Account? Login</a>
+      </form>
+    </div>
+    <script>
+      // function Check() {
+      //   if (cpassword == password) {
+      //     alert("Password don't match!");
+      //   }
+      // }
+      function alertcall() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var Gender = document.getElementsByClassName("Gender");
+        var password = document.getElementById("password").value;
+        var cpassword = document.getElementById("cpassword").value;
+        for (let i = 0; i < Gender.length; i++) {
+          if (Gender[i].checked) {
+            gender = Gender[i].value;
+          }
+        }
+        var name = document.getElementById("name").value;
+        if (password != cpassword) {
+          document.getElementById("cpassword").value = "";
+          document.getElementById("alert1").style.display = "block";
+        } else {
+          window.alert(
+            "You have successfully registered! \n" +
+              "Your Name is: " +
+              name +
+              "\nYour Email Address: " +
+              email +
+              "\nYour Gender: " +
+              gender
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

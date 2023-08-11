@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <a href="#navbar" id="Top">
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <nav
+      class="navbar bg-dark navbar-expand-lg bg-body-tertiary"
+      data-bs-theme="dark"
+      id="navbar"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Medium</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <!-- <button class="btn btn-outline-light" type="submit">
+                Search
+            </button> -->
+          </form>
+          <form
+            class="container-fluid justify-content-start"
+            style="position: relative; left: 32%; width: max-content"
+          >
+            <button
+              type="button"
+              class="btn btn-outline-light"
+              onclick="redirect()"
+            >
+              <i class="fa-regular fa-pen-to-square"></i>
+              <i> Write</i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-light"
+              onclick="redirect2()"
+            >
+              <i class="fa-regular fa-user"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-light"
+              onclick="redirect3()"
+            >
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              <i> Log Out</i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <hr style="margin-top: 0%" />
+    <div class="content">
+      <div class="element-1">
+        <div class="objects" id="obj1">
+          <a href="" class="post"
+            >The 18 Best Ways to Make Money by Reading Books</a
+          >
+          <p>
+            When I was younger, it was always my dream to become a professional
+            reader. I wanted my entire day job to be reading books, thinking
+            critically about what was good, what was bad, and what I would
+            change, and then sharing my thoughts with other people. I really
+            expected this to be a full-time job.
+            <a href="">
+              <i class="text">Read full post</i>
+            </a>
+          </p>
+          <button class="special-btn">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="tooltiptext">More</div>
+          </button>
+          <button class="special-btn" onclick="hide('obj1')">
+            <i class="fa-solid fa-circle-minus"></i>
+            <div class="tooltiptext">Don't show</div>
+          </button>
+          <button class="special-btn">
+            <i class="fa-regular fa-bookmark"></i>
+            <div class="tooltiptext">Add bookmark</div>
+          </button>
+        </div>
+        <br />
+        <hr style="width: 100%" id="obj1h" />
+
+        <div class="objects" id="obj2">
+          <a href="" class="post"
+            >3 Habits That Will Make You Mentally Strong</a
+          >
+          <p>
+            Instead of getting sucked into spirals of self-criticism and shame,
+            mental strength is what allows you to redirect your attention and
+            thinking somewhere else less destructive — like that conversation
+            you're having with your son or the report you're supposed to be
+            drafting.
+            <a href="">
+              <i class="text">Read full post</i>
+            </a>
+          </p>
+          <button class="special-btn">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="tooltiptext">More</div>
+          </button>
+          <button class="special-btn" onclick="hide('obj2')">
+            <i class="fa-solid fa-circle-minus"></i>
+            <div class="tooltiptext">Don't show</div>
+          </button>
+          <button class="special-btn">
+            <i class="fa-regular fa-bookmark"></i>
+            <div class="tooltiptext">Add bookmark</div>
+          </button>
+        </div>
+        <br />
+        <hr style="width: 100%" id="obj2h" />
+
+        <div class="objects" id="obj3">
+          <a href="" class="post">The UX Design Case Study That Got Me Hired</a>
+          <p>
+            Securing your first job in UX design can be challenging, but there
+            was one case study in particular that helped me differentiate myself
+            from other candidates. With the coaching of my mentor from
+            Designlab, I designed a non-traditional learning app that teaches
+            the Korean language using Korean media such as K-pop, K-drama, with
+            an emphasis on building a habit.
+            <a href="">
+              <i class="text">Read full post</i>
+            </a>
+          </p>
+          <button class="special-btn">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="tooltiptext">More</div>
+          </button>
+          <button class="special-btn" onclick="hide('obj3')">
+            <i class="fa-solid fa-circle-minus"></i>
+            <div class="tooltiptext">Don't show</div>
+          </button>
+          <button class="special-btn">
+            <i class="fa-regular fa-bookmark"></i>
+            <div class="tooltiptext">Add bookmark</div>
+          </button>
+        </div>
+        <br />
+        <hr style="width: 100%" id="obj3h" />
+
+        <div class="objects" id="obj4">
+          <a href="" class="post">Use Git like a senior engineer</a>
+          <p>
+            Git is a powerful tool that feels great to use when you know how to
+            use it. I've used these features of Git for years across teams and
+            projects. I'm still developing opinions around some workflows (like
+            to squash or not) but the core tooling is powerful and flexible (and
+            scriptable!)
+            <a href="">
+              <i class="text">Read full post</i>
+            </a>
+          </p>
+          <button class="special-btn">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="tooltiptext">More</div>
+          </button>
+          <button class="special-btn" onclick="hide('obj4')">
+            <i class="fa-solid fa-circle-minus"></i>
+            <div class="tooltiptext">Don't show</div>
+          </button>
+          <button class="special-btn">
+            <i class="fa-regular fa-bookmark"></i>
+            <div class="tooltiptext">Add bookmark</div>
+          </button>
+        </div>
+        <br />
+        <hr style="width: 100%" id="obj4h" />
+
+        <div class="objects">
+          <a href="" class="post"
+            >13 SQL Statements for 90% of Your Data Science Tasks</a
+          >
+          <p>
+            Structured Query Language (SQL) is a programming language designed
+            for managing and manipulating relational databases. It is widely
+            used by data analysts and data scientists to extract insights from
+            large datasets. <br />
+            SQL is a powerful tool that can be used to perform a wide variety of
+            data manipulation tasks, including filtering, sorting, grouping, and
+            aggregating data. In this article, we will cover 13 essential SQL
+            statements that will help you perform 90% of your data science
+            tasks. These statements are easy to understand and implement and
+            will provide you with a solid foundation for working with SQL.
+            <a href="">
+              <i class="text">Read full post</i>
+            </a>
+          </p>
+          <button class="special-btn">
+            <i class="fa-solid fa-ellipsis"></i>
+            <div class="tooltiptext">More</div>
+          </button>
+          <button class="special-btn">
+            <i class="fa-solid fa-circle-minus"></i>
+            <div class="tooltiptext">Don't show</div>
+          </button>
+          <button class="special-btn">
+            <i class="fa-regular fa-bookmark"></i>
+            <div class="tooltiptext">Add bookmark</div>
+          </button>
+        </div>
+        <br />
+        <hr style="width: 100%" />
+      </div>
+
+      <div class="vl"></div>
+
+      <div class="element-2">
+        <div id="buttons">
+          <button onclick="scroll1(1)" class="btn2">
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+          <p
+            style="
+              text-align: center;
+              font-weight: 500;
+              font-size: 140%;
+              margin-top: 0.2em;
+            "
+          >
+            Your Accounts
+          </p>
+          <!-- <button onclick="showData()" class="btn2">Show Accounts</button> -->
+          <button onclick="scroll1(9)" class="btn2">
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </div>
+        <div id="people">
+          <img
+            src="Profp.png"
+            alt=""
+            width="50px"
+            height="50px"
+            id="image"
+            onclick="redirect2()"
+          />
+          <div>
+            <p id="name1"></p>
+            <p id="email1"></p>
+          </div>
+        </div>
+        <div>
+          <p
+            style="
+              text-align: center;
+              font-weight: 500;
+              font-size: 120%;
+              margin: 2em;
+            "
+          >
+            People you may know
+          </p>
+        </div>
+        <div class="flex">
+          <div style="display: flex; gap: 10px">
+            <div class="Profp"><img src="Profp.png" alt="" width="25px" /></div>
+            <div class="people">
+              <b class="name">M.G. Seigler</b><br />
+              Creator and host of award-winning podcast, Moms Don't Have Time to
+              Read Books.
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn1"
+            onclick="follow('btnid1')"
+            id="btnid1"
+          >
+            Follow
+          </button>
+        </div>
+        <div class="flex">
+          <div style="display: flex; gap: 10px">
+            <div class="Profp"><img src="Profp.png" alt="" width="25px" /></div>
+            <div class="people">
+              <b class="name">James Kwak</b><br />
+              Author of Philosophy for Life and other books.
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn1"
+            onclick="follow('btnid2')"
+            id="btnid2"
+          >
+            Follow
+          </button>
+        </div>
+        <div class="flex">
+          <div style="display: flex; gap: 10px">
+            <div class="Profp"><img src="Profp.png" alt="" width="25px" /></div>
+            <div class="people">
+              <b class="name">David Wineberg</b><br />
+              Marketing Exec/Author. I build brands & tell stories.
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn1"
+            onclick="follow('btnid3')"
+            id="btnid3"
+          >
+            Follow
+          </button>
+        </div>
+        <div class="flex">
+          <div style="display: flex; gap: 10px">
+            <div class="Profp"><img src="Profp.png" alt="" width="25px" /></div>
+            <div class="people">
+              <b class="name">Markham Heid</b><br />
+              I'm a long time contributer at TIME ans several other media orgs.
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn1"
+            onclick="follow('btnid4')"
+            id="btnid4"
+          >
+            Follow
+          </button>
+        </div>
+        <div class="flex">
+          <div style="display: flex; gap: 10px">
+            <div class="Profp"><img src="Profp.png" alt="" width="25px" /></div>
+            <div class="people">
+              <b class="name">Roger Martin</b><br />
+              Professor Roger Martin in 2017 was named the #1 management
+              thinker.
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn1"
+            onclick="follow('btnid5')"
+            id="btnid5"
+          >
+            Follow
+          </button>
+        </div>
+        <div>
+          <a
+            href="#"
+            style="
+              float: right;
+              color: green;
+              font-size: 80%;
+              text-decoration: none;
+            "
+            >see more..</a
+          >
+        </div>
+      </div>
+    </div>
+    <div style="display: none">
+      <table id="table1">
+        <thead>
+          <th>sno</th>
+          <th>name</th>
+          <th>email</th>
+        </thead>
+        <tbody id="tbody1"></tbody>
+      </table>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="showdata.js"></script>
+    <script src="homepage.js"></script>
+  </body>
+</html>

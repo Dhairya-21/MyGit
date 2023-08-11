@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter a String");
+        var cap ="";
+        var small = "";
+        for(let i = 0;i<str.length;i++){
+
+            if (str.charCodeAt(i)<91 && str.charCodeAt(i)>=65){
+                cap = cap + str.charAt(i);
+            }
+            else if(str.charCodeAt(i)>=97 && str.charCodeAt(i)<=122){
+                small = small + str.charAt(i);
+            }
+        }
+        document.write(cap + small);
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Viewer</title>
+  </head>
+  <style>
+    td,
+    th {
+      border: solid;
+    }
+  </style>
+  <body>
+    <div>
+      <p>Please upload .csv file only</p>
+      <input type="file" id="fileInp" />
+      <button onclick="openFile()">Open</button>
+      <button onclick="show()">Show image</button>
+    </div>
+    <div style="display: flex; justify-content: center">
+      <table
+        id="table1"
+        style="
+          border: solid black;
+          border-collapse: collapse;
+          padding: 8px;
+          margin-top: 20px;
+        "
+      >
+        <thead
+          style="
+            border: solid black;
+            border-collapse: collapse;
+            background-color: aquamarine;
+          "
+        >
+          <tr>
+            <th style="width: 200px">Name</th>
+            <th style="width: 200px">Roll no</th>
+            <th style="width: 200px">Link</th>
+          </tr>
+        </thead>
+        <tbody style="border: solid black; border-collapse: collapse"></tbody>
+      </table>
+    </div>
+    <script>
+      function openFile() {
+        var fileread = document.getElementById("fileInp").files;
+        var file = fileread[0];
+
+        var fr = new FileReader();
+
+        fr.readAsText(file);
+
+        fr.onload = function (e) {
+          var fcsv = e.target.result;
+          var rdata = fcsv.split("\n");
+
+          var element = document
+            .getElementById("table1")
+            .getElementsByTagName("tbody")[0];
+          element.innerHTML = "";
+
+          for (let i = 1; i < rdata.length; i++) {
+            var newRow = element.insertRow();
+            var rowColData = rdata[i].split(",");
+            for (var j = 0; j < rowColData.length; j++) {
+              var cell = newRow.insertCell();
+              cell.innerHTML = rowColData[j];
+            }
+          }
+        };
+      }
+      function show() {
+        var rows = document.getElementById("table1").getElementsByTagName("tr");
+        for (var i = 1; i < rows.length; i++) {
+          var element1 = document
+            .getElementById("table1")
+            .getElementsByTagName("td")[3 * i - 1];
+
+          var img = document.createElement("img");
+          img.src = element1.innerHTML;
+          img.width = 120;
+          console.log(img);
+          element1.appendChild(img);
+          // element1.style.cursor = "pointer";
+          element1.onclick = function() {
+            let impath = img.getAttribute("src");
+            let fn = getFileName(impath);
+            saveAs(impath, fn);
+
+            function getFileName(str) {
+              return str.substring(str.lastIndexOf("/") + 1);
+            }
+          };
+          // document.getElementById("img1").src = element1;
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+  </body>
+</html>

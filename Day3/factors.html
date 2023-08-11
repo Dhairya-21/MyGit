@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factors</title>
+  </head>
+  <body>
+    <script>
+      var num = prompt("Enter a number");
+      function factors(num) {
+        let arr = [];
+        for (var i = 1; i <= num; i++) {
+          if (num % i == 0) {
+            arr.push(i);
+          }
+        }
+        return arr;
+      }
+      document.write(factors(num));
+    </script>
+  </body>
+</html>

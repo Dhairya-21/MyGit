@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="form.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="basic.js"></script>
+  </head>
+  <body>
+    <form action="" id="Form">
+      <div class="alert">Your message sent</div>
+      <div>
+        <p>Create Account</p>
+      </div>
+      <div class="flex">
+        <div>
+          <label for="">First Name <b>*</b></label> <br />
+          <input
+            type="text"
+            placeholder="Enter your First Name"
+            id="fname"
+            required
+          />
+        </div>
+        <div style="position: absolute; left: 50%">
+          <label for="">Last Name <b>*</b></label> <br />
+          <input
+            type="text"
+            placeholder="Enter your Last Name"
+            id="lname"
+            required
+          />
+        </div>
+      </div>
+      <div style="margin: 10px">
+        <label for="">Email Address <b>*</b></label> <br />
+        <input type="text" placeholder="Enter your Email" id="email" required />
+      </div>
+      <div class="flex">
+        <div>
+          <label for="">Password <b>*</b></label> <br />
+          <input
+            type="password"
+            id="pword"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div style="position: absolute; left: 50%">
+          <label for="">Confirm Password <b>*</b></label> <br />
+          <input
+            type="password"
+            id="cpword"
+            placeholder="Enter your password again"
+          />
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <label for="">Gender <b>*</b></label> <br />
+          <input type="radio" name="Gender" class="gender" /> Male
+          <input type="radio" name="Gender" class="gender" /> Female
+        </div>
+        <div style="position: absolute; left: 50%">
+          <label for="">Hobbies <i>(Optional)</i></label> <br />
+          <input type="checkbox" /> Music <input type="checkbox" /> Sports
+          <input type="checkbox" /> Travel <input type="checkbox" /> Movies
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <label for="">Source of Income <b>*</b></label> <br />
+          <select id="source" name="Income Source">
+            <option value="Select">Select</option>
+            <option value="Employed">Employed</option>
+          </select>
+        </div>
+        <div style="position: absolute; left: 50%">
+          <label for="">Income <b>*</b></label> <br />
+          <input type="range" size="40px" id="income" />
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <label for="">Upload Profile Picture <b>*</b></label> <br />
+          <input type="file" id="profp" />
+        </div>
+        <div style="position: absolute; left: 50%">
+          <label for="">Age <b>*</b></label> <br />
+          <input type="number" id="age" />
+        </div>
+      </div>
+      <div style="margin: 10px">
+        <label for="">Bio <i>(Optional)</i></label> <br />
+        <textarea id="bio"></textarea>
+      </div>
+      <button type="submit" id="submit">Next</button><br />
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>

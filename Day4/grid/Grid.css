@@ -1,0 +1,26 @@
+body{
+    background-image: url(img.png);
+    background-size: cover;
+}
+#Grid{
+    left: auto;
+    display: grid;
+    /* grid-template-rows: auto auto auto; */
+    grid-template-columns: auto auto auto;
+    /* justify-content: space-evenly; */
+    gap: 0px;
+}
+.element{
+    padding: 10px;
+    border-style: solid;
+    border-color: transparent;
+    width: auto;
+    height: 200px;
+    text-align: center;
+    border-radius: 200px;
+    /* margin: 30px; */
+    background-color: white;
+}
+.element:hover{
+    opacity: 0%;
+}

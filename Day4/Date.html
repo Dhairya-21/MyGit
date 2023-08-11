@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Calculator</title>
+    <!-- <script src="test.js"></script> -->
+</head>
+<body>
+    <div>
+        <label for="">Please Enter your desired date</label> <br>
+        <input type="date" id="Date_Inp" name="date" />
+        <button id="Check" onclick="CheckTime()">Check </button>
+    </div>
+    <input type="text" id="dateT" disabled> 
+    </div>
+    <script>
+        
+        
+        function CheckTime(){
+            var today = new Date();
+            var Day = today.getDate();
+            var Month = (today.getMonth() + 1);
+            var year1 = today.getFullYear();
+            var dated = document.getElementById("Date_Inp").value;
+            arrdated = dated.split('-');
+            var datediff = parseInt(arrdated[2]) - parseInt(Day); 
+            var monthdiff = (parseInt(arrdated[1]) - parseInt(Month))*30;
+            var yeardiff = (parseInt(arrdated[0]) - parseInt(year1))*365;
+            var hours = (datediff + monthdiff + yeardiff)*24;
+            document.getElementById("dateT").value = hours + " hours";
+        }
+    </script>
+</body>
+</html>

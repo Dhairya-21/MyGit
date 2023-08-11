@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finds "ee"</title>
+  </head>
+  <body>
+    <script>
+      var str = prompt("Enter a String");
+      function detect(str) {
+        if (str.match(/[e][e]/i)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      document.write(detect(str));
+    </script>
+  </body>
+</html>

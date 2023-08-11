@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      th,
+      td {
+        border: solid aliceblue;
+      }
+      #btna1 {
+        display: flex;
+        margin: 2em;
+        justify-content: space-between;
+      }
+      #name1 {
+        text-align: center;
+        font-size: 200%;
+        padding: 2%;
+        font-weight: 400;
+      }
+      #email1 {
+        padding: 1% 2%;
+        font-size: 140%;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(224, 238, 251)">
+    <nav
+      class="navbar bg-dark navbar-expand-lg bg-body-tertiary border-bottom border-body"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="homepage.html">
+          <button type="button" class="btn btn-outline-light">
+            <i class="fa-solid fa-house"></i>
+          </button>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#"
+              >Your Profile</a
+            >
+            <!-- <a class="nav-link active" href="#">Show Tables</a> -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div>
+      <!-- <button
+        class="btn btn-dark"
+        style="width: max-content; float: right; margin: 0 1%"
+      >
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        Log out
+      </button><br> -->
+      <table style="display: none" id="table1">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Blogs</th>
+          </tr>
+        </thead>
+        <tbody id="tbody1"></tbody>
+      </table>
+    </div>
+    <div id="btna1">
+      <button onclick="scroll1(1)" class="btn btn-dark">
+        <i class="fa-solid fa-angles-left"></i>
+      </button>
+      <h1 style="text-align: center">Your Published Stories</h1>
+      <button onclick="scroll1(9)" class="btn btn-dark">
+        <i class="fa-solid fa-angles-right"></i>
+      </button>
+    </div>
+    <div class="container-md">
+      <div id="name1"></div>
+      <div id="email1"></div>
+    </div>
+    <script>
+      function redirect() {
+        window.location = "loginpg.html";
+      }
+    </script>
+    <script type="module" src="profile.js"></script>
+    <script>
+      var x = 0;
+      function showData() {
+        var name = [];
+        var email = [];
+        var rows = document.getElementById("table1").getElementsByTagName("tr");
+        for (let a = 1; a < rows.length; a++) {
+          name.push(
+            document.getElementById("table1").getElementsByTagName("td")[
+              a * 2 - 2
+            ].innerHTML
+          );
+          email.push(
+            document.getElementById("table1").getElementsByTagName("td")[
+              a * 2 - 1
+            ].innerHTML
+          );
+        }
+        document.getElementById("name1").innerHTML = name[x];
+        document.getElementById("email1").innerHTML = email[x];
+      }
+
+      function scroll1(num) {
+        var name = [];
+        var email = [];
+        var rows = document.getElementById("table1").getElementsByTagName("tr");
+        for (let a = 1; a < rows.length; a++) {
+          name.push(
+            document.getElementById("table1").getElementsByTagName("td")[
+              a * 2 - 2
+            ].innerHTML
+          );
+          email.push(
+            document.getElementById("table1").getElementsByTagName("td")[
+              a * 2 - 1
+            ].innerHTML
+          );
+        }
+        if (num == 1 && x == 0) {
+          x = name.length - 1;
+          document.getElementById("name1").innerHTML = name[x];
+          document.getElementById("email1").innerHTML = email[x];
+        } else if (num == 1) {
+          x -= 1;
+          document.getElementById("name1").innerHTML = name[x];
+          document.getElementById("email1").innerHTML = email[x];
+        } else if (num == 9 && x == name.length - 1) {
+          x = 0;
+          document.getElementById("name1").innerHTML = name[x];
+          document.getElementById("email1").innerHTML = email[x];
+        } else if (num == 9) {
+          x += 1;
+          document.getElementById("name1").innerHTML = name[x];
+          document.getElementById("email1").innerHTML = email[x];
+        }
+      }
+      setInterval(function () {
+        window.onload = showData();
+      }, 2000);
+    </script>
+  </body>
+</html>

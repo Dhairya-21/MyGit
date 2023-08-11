@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Connected Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  </head>
+  <body>
+    <div class="form">
+      <form action="" id="contactForm">
+        <div class="flex">
+          <div>
+            <label for="">First name</label>
+            <div class="inputBox">
+              <input
+                type="text"
+                id="fname"
+                placeholder="Enter your first name"
+              />
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%">
+            <label for="">Last name</label>
+            <div class="inputBox">
+              <input
+                type="text"
+                id="lname"
+                placeholder="Enter your last name"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="">Email address</label>
+          <div class="inputBox">
+            <input type="email" id="emailid" placeholder="Enter your email" />
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <label for="">Password</label>
+            <div class="inputBox">
+              <input type="password" id="pword" placeholder="Enter password" />
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%">
+            <label for="">Confirm Password</label>
+            <div class="inputBox">
+              <input type="password" id="cpword" placeholder="Enter password" />
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <label for="">Gender</label>
+            <div class="radiobtn">
+              <input type="radio" name="gender" value="Male" id="gender" />Male
+              <input
+                type="radio"
+                name="gender"
+                value="Female"
+                id="gender"
+              />Female
+            </div>
+          </div>
+          <div>
+            <label for="">Hobbies</label>
+            <div class="checkbox">
+              <input type="checkbox" name="hobbies" value="Music" />Music
+              <input type="checkbox" name="hobbies" value="Sports" />Sports
+              <input type="checkbox" name="hobbies" value="Travel" />Travel
+              <input type="checkbox" name="hobbies" value="Movies" />Movies
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <label for="">Source of income</label>
+            <div class="select">
+              <select name="source" id="source">
+                <option value="" selected></option>
+                <option value="Employed">Employed</option>
+                <option value="Self-employeed">Self Employeed</option>
+                <option value="Business owner">Business Owner</option>
+                <option value="Student">Student</option>
+              </select>
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%">
+            <label for="">Income</label>
+            <div class="range">
+              <input
+                type="range"
+                value="6000"
+                max="20000"
+                min="5000"
+                onchange="rangeValue(this.value);"
+              />
+              <input type="text" id="rangeinp" value="6000" />
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <label for="">Upload profile photo</label>
+            <div class="file">
+              <input type="file" id="photo" />
+            </div>
+          </div>
+          <div style="position: absolute; left: 50%">
+            <label for="">Age</label>
+            <div class="inputBox">
+              <input type="number" min="1" id="age" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="">Bio</label>
+
+          <div class="inputBox">
+            <textarea id="bio" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+
+        <div class="inputBox">
+          <button type="submit">Create</button>
+        </div>
+      </form>
+    </div>
+    <div id="retrive">Hello</div>
+    <script src="main.js"></script>
+    <script>
+      function rangeValue(val) {
+        document.getElementById("rangeinp").value = val;
+      }
+    </script>
+  </body>
+</html>

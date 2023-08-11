@@ -1,0 +1,133 @@
+.content {
+  display: flex;
+  gap: 20px;
+}
+.element-1 {
+  margin-left: 4%;
+  padding: 1%;
+}
+.objects {
+  margin: 4%;
+  display: inline;
+}
+.text {
+  float: right;
+  padding: 7px;
+  opacity: 60%;
+  font-size: 70%;
+}
+.element-2 {
+  width: 70%;
+  padding: 1%;
+}
+#buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.btn2{
+  border: solid black;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 2em #e6e9f9;
+}
+.btn2:hover{
+  background-color: black;
+  color: white;
+}
+.Profp {
+  position: relative;
+  top: 6%;
+}
+.vl {
+  border-left: 1px solid rgb(192, 192, 192);
+  height: 1000px;
+}
+.post {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+}
+.special-btn {
+  border: none;
+  padding: 0%;
+  background-color: white;
+  float: right;
+  position: relative;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  font-size: 8px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+
+  top: 0%;
+  left: 50%;
+}
+.special-btn:hover .tooltiptext {
+  visibility: visible;
+}
+#people {
+  border: solid black;
+  border-radius: 8px;
+  gap: 20px;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 0.5em 2em;
+  margin: 0.5em 0%;
+  display: flex;
+  font-weight: 600;
+  width: 340px;
+}
+#image{
+  cursor: pointer;
+}
+.name {
+  color: black;
+  font-size: 16px;
+  padding: 1%;
+}
+#Top {
+  opacity: .8;
+  z-index: 10;
+  border: solid black;
+  background-color: black;
+  border-radius: 100px;
+  padding: 0.6% 1%;
+  position: fixed;
+  top: 90%;
+  left: 95%;
+  color: white;
+}
+#Top:hover{
+  opacity:1 ;
+}
+.btn1 {
+  position: relative;
+  border: solid black;
+  border-width: 1px;
+  border-radius: 16px;
+  height: min-content;
+  top: 20px;
+  font-size: 12px;
+  padding: 2% 4%;
+  background-color: white;
+}
+.btn1:hover {
+  cursor: pointer;
+  background-color: rgb(245, 244, 244);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+@media screen and (max-width: 1000px) {
+  .element-2 {
+    display: none;
+  }
+}

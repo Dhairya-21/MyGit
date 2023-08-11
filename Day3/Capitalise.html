@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capitalise</title>
+  </head>
+  <body>
+    <script>
+        var str = prompt("Enter a String");
+      function capitalise(str) {
+        var ste = "";
+        for (var i = 0; i < str.length; i++) {
+          if (str.charCodeAt(i) % 2 == 0) {
+            ste = ste + str.charAt(i).toUpperCase();
+          } else {
+            ste = ste + str.charAt(i).toLowerCase();
+          }
+        }
+        return ste;
+      }
+      document.write(capitalise(str));
+    </script>
+  </body>
+</html>

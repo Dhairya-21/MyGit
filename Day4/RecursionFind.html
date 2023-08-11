@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Double Letters</title>
+  </head>
+  <body>
+    <input type="file" name="" id="filetxt" />
+    <div id="StoreValue"></div>
+    <!-- <button id="btn1" onclick=>Click to show recurring letters</button> -->
+    <script>
+      document
+        .getElementById("filetxt")
+        .addEventListener("change", function () {
+          var fr = new FileReader();
+          fr.onload = () => {
+            var text = fr.result;
+            document.getElementById("StoreValue").innerHTML +="The original string is "+ text + "<br>"; 
+
+            function recursion(str) {
+              var ste = str.split("").sort().join("");
+              if (ste.charAt(0) == ste.charAt(1)) {
+                var result = ste.charAt(0);
+                return result;
+              } else {
+                return recursion(str.slice(1));
+              }
+            }
+            document.getElementById("StoreValue").innerHTML += "first double letter is " + '"'+recursion(text)+'"';
+          };
+
+          fr.readAsText(this.files[0]);
+        });
+    </script>
+  </body>
+</html>

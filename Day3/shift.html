@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shift Operator</title>
+  </head>
+  <body>
+    <script>
+      var a = prompt("Enter a number");
+      var b = prompt("Shift the previous number by");
+      function right_shift_operator(num1, num2) {
+        return Math.floor(num1 / Math.pow(2, num2));
+      }
+      document.write(right_shift_operator(a, b));
+    </script>
+  </body>
+</html>

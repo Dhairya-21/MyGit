@@ -1,0 +1,18 @@
+*{
+    text-align: center;
+}
+div{
+    display:flex;
+    justify-content: center;
+    /* align-items:center ; */
+}
+table{
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+}
+th, td{
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Website</title>
+    <link rel="stylesheet" href="draggable.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </head>
+  <body>
+    <!-- <div id="add"></div> -->
+    <div id="circle1" class="circle"></div>
+    <div id="circle2" ></div>
+    <script>
+      $(function () {
+        $(".circle").draggable();
+        // $("#add").draggable();
+        $("#circle2").droppable({
+          drop: function () {
+            // $("#add").prepend("<div class='circle'></div>");
+            $("#circle1").hide();
+            $("#circle2").append(newcircle());
+            $("#circle1").css("top", "2%");
+            $("#circle1").css("left", "2%");
+            $("#circle1").fadeIn();
+          },
+        });
+      });
+    </script>
+    <script>
+        var index = 0;
+        function newcircle(){
+            var circle = document.createElement('div');
+            circle.style.width = 90 - index*10 + "%";
+            circle.style.height = 90 - index*10 + "%";
+            circle.style.border = "solid black";
+            circle.style.borderRadius = "50%";
+            circle.style.position = "absolute";
+            circle.style.top = "50%";
+            circle.style.left = "50%";
+            circle.style.transform = "translate(-50%,-50%)";
+            if(index%4==0){
+                circle.style.backgroundColor ="red";
+                document.getElementById("circle1").style.backgroundColor = "blue";
+            }else if(index%4==1){
+                circle.style.backgroundColor ="blue";
+                document.getElementById("circle1").style.backgroundColor = "green";
+            }else if(index%4==2){
+                circle.style.backgroundColor ="green";
+                document.getElementById("circle1").style.backgroundColor = "yellow";
+            }else{
+                circle.style.backgroundColor ="yellow";
+                document.getElementById("circle1").style.backgroundColor = "red";
+            }
+            index +=1;
+            return circle;
+        }
+    </script>
+  </body>
+</html>

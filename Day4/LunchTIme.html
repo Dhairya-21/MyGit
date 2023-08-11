@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time calculator</title>
+</head>
+<body>
+    <script>
+        var ctime = prompt("Enter time in 00:00 format (Lunch time is 1:00)");
+        var timearr = ctime.split(':');
+        var hour = 12 - parseInt(timearr[0]);
+        var min = 60 - parseInt(timearr[1]);
+            document.write("Time left for lunch is \n"); 
+            document.write(hour + ":" + min);
+    </script>
+</body>
+</html>

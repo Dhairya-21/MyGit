@@ -1,0 +1,107 @@
+.content {
+    display: flex;
+    gap: 20px;
+  }
+  .element-1 {
+    margin-left: 4%;
+    padding: 1%;
+  }
+  .objects{
+      margin: 4%;
+      display: inline;
+  }
+  .text{
+      float: right;
+      padding: 7px;
+      opacity: 60%;
+      font-size: 70%;
+  }
+  .element-2 {
+    width: 70%;
+    padding: 1%;
+  }
+  .Profp{
+      position: relative;
+      top: 6%;
+  }
+  .vl {
+    border-left: 1px solid rgb(192, 192, 192);
+    height: 1000px;
+  }
+  .post {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+  }
+  .special-btn {
+    border: none;
+    padding: 0%;
+    background-color: white;
+    float: right;
+    position: relative;
+  }
+  
+  /* Tooltip text */
+  .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    font-size: 8px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+  
+    top: 0%;
+    left: 50%;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .special-btn:hover .tooltiptext {
+    visibility: visible;
+    
+  }
+  .people{
+      font-size: 12px;
+      margin-bottom: 1%;
+      color: gray;
+  }
+  .name{
+      color: black;
+      font-size: 16px;
+      padding: 1%;
+  }
+  #Top{
+      border: solid lightblue;
+      border-radius: 100px;
+      padding: 0.6% 1%;
+      position: fixed;
+      top: 90%;
+      left: 95%;
+  }
+  .btn1{
+      position: relative;
+      border: solid black;
+      border-width: 1px;
+      border-radius: 16px;
+      height: min-content;
+      top: 20px;
+      font-size: 12px;
+      padding: 2% 4%;
+      background-color: white;
+  }
+  .btn1:hover{
+      cursor: pointer;
+      background-color: rgb(245, 244, 244);
+  }
+  .flex{
+      display: flex;
+      justify-content: space-between ;
+      margin-bottom: 5%;
+  }
+  @media screen and (max-width: 720px){
+      .element-2{
+          display: none;
+      }
+      
+  }

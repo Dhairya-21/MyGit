@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  /* align-content: center; */
+  justify-content: center;
+  background-color: rgb(126, 126, 216);
+}
+form {
+  background-color: white;
+  border-radius: 12px;
+  width: 45%;
+}
+p {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(95, 95, 95);
+}
+i{
+  opacity: 70%;
+  font-size: 70%;
+  color: black;
+}
+div {
+  padding: 10px;
+  /* margin: 12px; */
+}
+.flex {
+  display: flex;
+  gap: 50px;
+}
+input[type="text"] {
+  opacity: 70%;
+}
+label {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: rgb(11, 129, 129);
+  font-weight: bolder;
+  /* color: rgb(51, 156, 156); */
+}
+textarea {
+  width: 98%;
+  height: 60px;
+}
+.alert {
+  width: 100%;
+  background: rgb(0, 255, 106);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  display: none;
+}
+#submit {
+  padding: 10px;
+  position: relative;
+  left: 80%;
+  width: 80px;
+  margin-bottom: 8px;
+}
+b{
+  color: red;
+}

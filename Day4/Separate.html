@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Separator</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter consecutive numbers. If there is a missing number it will be replaced by ' '");
+        var firstnum = parseInt(str.charAt(0));
+        var lastnum = parseInt(str.charAt(str.length-1));
+        var count = 0;
+        for(let i = firstnum; i<=lastnum; i++){
+            if(parseInt(str.charAt(count)) == i){
+                document.write(i);
+                count +=1;
+            }
+            else{
+                document.write(" ");
+            }
+        }
+    </script>
+</body>
+</html>

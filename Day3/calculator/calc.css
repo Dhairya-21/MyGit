@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+#calculator{
+    border-style: solid;
+    border-color: gray; 
+    border-radius: 12px;
+    padding: 12px;
+    background-color: aliceblue;
+}
+button{
+    width: 50px;
+    height: 30px;
+    margin: 3px;
+}
+#screen{
+    width: 220px;
+    margin: 3px;
+    height: 40px;
+}
+#operation, #num{
+    width: 45px;
+    margin: 2.5px;
+    height: 25px;
+}
+.special{
+    width: 105px;
+}
