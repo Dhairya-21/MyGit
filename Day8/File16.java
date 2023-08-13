@@ -26,9 +26,9 @@ public class File16 {
                         break;
                     }
                 }
-                System.out.println();
+                // System.out.println();
             }
-            System.out.println();
+            // System.out.println();
         }
         return dp[dice][outcome];
     }
